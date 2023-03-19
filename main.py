@@ -23,8 +23,7 @@ def parallel_processing(n, m, data):
 
 def main():
     # TODO: create input from keyboard
-    input_string = input()
-    input_split = input_string.split('\\r\\n')
+    #  
     # input consists of two lines
     # first line - n and m
     # n - thread count 
@@ -33,15 +32,12 @@ def main():
     n = 0
     m = 0
 
-    n, m = map(int, input_split[0].split())
+    n, m = map(int, input().split())
 
     # second line - data 
     # data - contains m integers t(i) - the times in seconds it takes any thread to process i-th job
 
-    if len(input_split) > 1:
-        data = list(map(int, input_split[1].split()))
-    else:
-        data = []
+    data = list(map(int, input().split()))
 
     # TODO: create the function
     result = parallel_processing(n,m,data)
@@ -53,3 +49,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
